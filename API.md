@@ -41,127 +41,127 @@
 <a name="IUser">[**IUser**](./IUser.md)</a>
 -----
 
-+ +Del(ID : int) - функция удаления пользователя;
++ +Del(ID : int) : bool - функция удаления пользователя;
 
-+ +Validation(Login:string, Password:string) - функция проверки логина и пароля, вводимых пользователем.
++ +Validation(Login:string, Password:string) : bool - функция проверки логина и пароля, вводимых пользователем.
 
 <a name="IClient">[**IClient**](./IClient.md)</a>
 -----
 
-+ +Add(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция добавления пользователя в БД;
++ +Add(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string): int – функция добавления пользователя в БД;
 
-+ +Save(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция сохранения изменений;
++ +Save(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) : bool – функция сохранения изменений;
 
-+ +GetAll() - выводит список всех клиентов;
++ +GetAll() : List<Client> - выводит список всех клиентов;
 
-+ +FindClientByID(ID : int)  - поиск клиента по ID;
++ +FindClientByID(ID : int) : Client - поиск клиента по ID;
 
 <a name="ITrainer">[**ITrainer**](./ITrainer.md)</a>
 -----
 
-+ +GetAll() - выводит список всех тренеров;
++ +GetAll() : List<Trainer> - выводит список всех тренеров;
 
-+ +FindTrainerByID(ID : int) - поиск тренера по ID;
++ +FindTrainerByID(ID : int) : Trainer - поиск тренера по ID;
 
-+ +Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функция добавления тренера в БД.
++ +Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) : int - функция добавления тренера в БД.
 
 <a name="IPhoto">[**IPhoto**](./IPhoto.md)</a>
 -----
 
-+ +Add(URL : string) – функция добавления фото в БД;
++ +Add(URL : string) : int – функция добавления фото в БД;
 
-+ +Del(ID : int) – функция удаления фото (Присвоение статуса «удаленный»).
++ +Del(ID : int) : bool – функция удаления фото (Присвоение статуса «удаленный»).
 
 <a name="IService">[**IService**](./IService.md)</a>
 -----
 
-+ +Add(Name:string, Cost:int, Comment:string)– функциядобавленияуслугивБД;
++ +Add(Name:string, Cost:int, Comment:string) : int – функция добавления услуги в БД;
 
-+ +Del(ID : int) – функция удаления услуги (Присвоение статуса «удаленная»);
++ +Del(ID : int) : bool – функция удаления услуги (Присвоение статуса «удаленная»);
 
-+ +Save(Name:string, Cost:int, Comment:string) – функциясохраненияизменений;
++ +Save(Name:string, Cost:int, Comment:string) : bool – функциясохраненияизменений;
 
-+ +GetAll() - вывести список всех услуг;
++ +GetAll() : List<Service> - вывести список всех услуг;
 
-+ +GetTrainers(IDServise : int) - вывести всех тренеров услуги;
++ +GetTrainers(IDServise : int) : List<Trainer> - вывести всех тренеров услуги;
 
-+ +FindServiceByID(ID : int) - поискуслугипо ID;
++ +FindServiceByID(ID : int) : Service - поискуслугипо ID;
 
-+ +GetBalanceService(IDCard : int) - показать баланс карты, то есть количество услуги на карте;
++ +GetBalanceService(IDCard : int) : Dictionary<string, int> - показать баланс карты, то есть количество услуги на карте;
 
-+ +GetBalanceFrost(IDCard : int) - показать количество дней заморозки.
++ +GetBalanceFrost(IDCard : int) :  Dictionary<string, int> - показать количество дней заморозки.
 
 <a name="ITariff">[**ITariff**](./ITariff.md)</a>
 -----
 
-+ +Add(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) - Добавить новый тариф;
++ +Add(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) : int - Добавить новый тариф;
 
-+ +GetServices() - показать услуги по тарифу;
++ +GetServices(ID : int) : List<Service> - показать услуги по тарифу;
 
-+ +Del(ID : int) – функция удаления тарифа (Присвоение статуса «удаленный»);
++ +Del(ID : int) : bool – функция удаления тарифа (Присвоение статуса «удаленный»);
 
-+ +Save(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) – функция сохранения изменений;
++ +Save(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) : bool – функция сохранения изменений;
 
-+ +GetAll(ID : int) - вывести список всех тарифов;
++ +GetAll(ID : int) : List<Tariff> - вывести список всех тарифов;
 
 + +FindTarrifsByID(ID : int) - найти тариф по ID;
+
++ +AddServiceInTariff(IDService : int, IDTariff : int, Periodicity : int, Amount : int) : bool - добавить услугу в тариф.
 
 <a name="IRoom">[**IRoom**](./IRoom.md)</a>
 -----
 
-+ +Add(Name:string, Equipment:string, Capacity:int,Comment:string) - Добавить помещение;
++ +Add(Name:string, Equipment:string, Capacity:int,Comment:string) : int - Добавить помещение;
 
-+ +Del(ID : int) – функция удаления помещение (Присвоение статуса «удаленное»);
++ +Del(ID : int) : bool – функция удаления помещение (Присвоение статуса «удаленное»);
 
-+ +Save(Name:string, Equipment:string, Capasity:int,Comment:string) – функция сохранения изменений;
++ +Save(Name:string, Equipment:string, Capasity:int,Comment:string) : bool – функция сохранения изменений;
 
-+ +GetAll() - вывести список всех помещений;
++ +GetAll() : List<Room> - вывести список всех помещений;
 
-+ +FindRoomByID(ID : int) - поискпо ID;
++ +FindRoomByID(ID : int) : Room - поискпо ID;
 
-+ +GetScheduleRoomByTime(ID:int) - показать расписание помещения
++ +GetScheduleRoomByTime(ID:int) : Dictionary<DateTIme,string> - показать расписание помещения
 
 <a name="ICard">[**ICard**](./ICard.md)</a>
 -----
-+ +Add(IDTariff: int, IDClient: int) - Добавить карту;
++ +Add(IDTariff: int, IDClient: int) : int - Добавить карту;
 
-+ +Del(ID : int) – функция удаления карты (Присвоение статуса «удаленная»);
++ +Del(ID : int) : bool – функция удаления карты (Присвоение статуса «удаленная»);
 
-+ +Save(IDTariff: int) – функция сохранения изменений;
++ +Save(IDTariff: int) : bool – функция сохранения изменений;
 
-+ +GetAll() - вывести список всех карт;
++ +GetAll() : List<Card> - вывести список всех карт;
 
-+ +FindCardByID(ID : int) - поискпо ID;
++ +FindCardByID(ID : int) : Card - поискпо ID;
 
-+ +ShowBalance(IDCard : int) - показать остаток услуг по карте;
++ +AddVisit(IDCard : int, IDService : int) : int - добавить посещение;
 
-+ +AddVisit(IDCard : int, IDService : int) - добавить посещение;
++ +DelVisit(IDCard : int, IDService : int) : bool - удалить посещение;
 
-+ +DelVisit(IDCard : int, IDService : int) - удалить посещение;
-
-+ +FrostCard(IDCard : int, StartDate : DateTime, EndDate : DateTime) - заморозка карты
++ +FrostCard(IDCard : int, StartDate : DateTime, EndDate : DateTime) : bool - заморозка карты
 
 <a name="ISchedule">[**ISchedule**](./ISchedule.md)</a>
 -----
 
-+ +Add(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) - Добавитьзапись;
++ +Add(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) : int - Добавитьзапись;
 
-+ +Del(ID : int) – функция удаления запись (Присвоение статуса «удаленная»);
++ +Del(ID : int) : bool – функция удаления запись (Присвоение статуса «удаленная»);
 
-+ +Save(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) – функция сохранения изменений;
++ +Save(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) : bool – функция сохранения изменений;
 
-+ +AddFrost( StartDate : DateTime, EndDate : DateTime, IDCard:int) - заморозить карту;
++ +AddFrost( StartDate : DateTime, EndDate : DateTime, IDCard:int) : bool - заморозить карту;
 
-+ +GetAll() - вывести список всех записей;
++ +GetAll() : List<Schedule> - вывести список всех записей;
 
 <a name="IPayment">[**IPayment**](./IPayment.md)</a>
 -----
 
-+ +Add(IDClient:int, Date:DateTime, Amount:int) - Добавить платеж;
++ +Add(IDClient:int, Date:DateTime, Amount:int) : int - Добавить платеж;
 
-+ +Del(ID : int) – функция удаления платежа из БД;
++ +Del(ID : int) : bool – функция удаления платежа из БД;
 
-+ +GetAll() - вывести список всех платежей.
++ +GetAll() : List<Payments> - вывести список всех платежей.
 
 
 

@@ -6,30 +6,36 @@
 
 ### Реализация интерфейса
 
-+ **+Add**(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) - Добавить новый тариф;
++ **+Add**(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) : int - Добавить новый тариф;
 	* Name - наименование тарифа;
 	* Duration - длительность тарифа;
 	* TotalCost - стоимость тарифа;
 	* StartDate - дата начала продаж тарифа;
 	* DateRemoved - дата окончания продаж тарифа;
 
-+ **+GetServices**(ID : int) - показать услуги по тарифу;
++ **+GetServices**(ID : int) : List<Service> - показать услуги по тарифу;
 	* ID - номер тарифа в БД;
 
-+ **+Del**(ID : int) – функция удаления тарифа (Присвоение статуса «удаленный»);
++ **+Del**(ID : int) : bool – функция удаления тарифа (Присвоение статуса «удаленный»);
 	* ID - номер тарифа в БД;
 
-+ **+Save**(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) – функция сохранения изменений;
++ **+Save**(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) : bool – функция сохранения изменений;
 	* Name - наименование тарифа;
 	* Duration - длительность тарифа;
 	* TotalCost - стоимость тарифа;
 	* StartDate - дата начала продаж тарифа;
 	* DateRemoved - дата окончания продаж тарифа.
 
-+ **+GetAll**() - вывести список всех тарифов;
++ **+GetAll**() : List<Tariff> - вывести список всех тарифов;
 
-+ **+FindTarrifsByID**(ID : int) - найти тариф по ID;
-	* ID - номер тарифа в БД.
++ **+FindTarrifsByID**(ID : int) : Tariff - найти тариф по ID;
+	* ID - номер тарифа в БД;
+
++ **+AddServiceInTariff**(IDService : int, IDTariff : int, Periodicity : int, Amount : int) : bool - добавить услугу в тариф.
+	* IDService - номер услуги в БД;
+	* IDTariff - номер тарифа в БД;
+	* Periodicity - переодичность услуги;
+	* Amount - количество услуги в тарифе.
 
 ## Описание класса Tariff
 
