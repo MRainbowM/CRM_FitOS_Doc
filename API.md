@@ -35,6 +35,8 @@
 
 <a name="IUser">**IUser**</a>
 
+[Показать](./IUser.md "Описание")
+
 + +Del(ID : int) - функция удаления пользователя;
 
 + +Validation(Login:string, Password:string) - функция проверки логина и пароля, вводимых пользователем.
