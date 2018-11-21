@@ -36,7 +36,6 @@
 <a name="IUser">[**IUser**](./IUser.md)</a>
 -----
 
-
 + +Del(ID : int) - функция удаления пользователя;
 
 + +Validation(Login:string, Password:string) - функция проверки логина и пароля, вводимых пользователем.
@@ -59,7 +58,7 @@
 
 + +FindTrainerByID(ID : int) - поиск тренера по ID;
 
-+ Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функция добавления тренера в БД.
++ +Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функция добавления тренера в БД.
 
 <a name="IPhoto">[**IPhoto**](./IPhoto.md)</a>
 ***
@@ -79,7 +78,7 @@
 
 + +GetAll() - вывести список всех услуг;
 
-+ +GetTrainers(ID\_Servise : int) - вывести всех тренеров услуги;
++ +GetTrainers(IDServise : int) - вывести всех тренеров услуги;
 
 + +FindServiceByID(ID : int) - поискуслугипо ID;
 
