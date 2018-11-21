@@ -34,7 +34,6 @@
 + [IPayment](#IPayment);
 
 <a name="IUser">[**IUser**](./IUser.md)</a>
-
 -----
 
 + +Del(ID : int) - функция удаления пользователя;
