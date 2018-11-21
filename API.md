@@ -21,7 +21,17 @@
 Рисунок 3 Диаграмма интерфейсов
 
 *Спикок интерфейсов:*
-[IUser](#IUser)
+
++ [IUser](#IUser);
++ [IClient](#IClient);
++ [ITrainer](#ITrainer);
++ [IPhoto](#IPhoto);
++ [IService](#IService);
++ [ITariff](#ITariff);
++ [IRoom](#IRoom);
++ [ICard](#ICard);
++ [ISchedule](#ISchedule);
++ [IPayment](#IPayment);
 
 <a name="IUser">**IUser**</a>
 
@@ -29,9 +39,7 @@
 
 + +Validation(Login:string, Password:string) - функция проверки логина и пароля, вводимых пользователем.
 
-**IClient**
-
-Данный класс наследует все операции классаUser, содержит в себе атрибуты: FIO, Sex, Haight, Weight, Health (состояние здоровья), Phone, DOB (дата рождения), Comment (комментарий), State (статус: удаленный или нет).
+<a name="IClient">**IClient**</a>
 
 + +Add(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функциядобавленияпользователявБД;
 
@@ -41,7 +49,7 @@
 
 + +FindClientByID(ID : int)  - поиск клиента по ID;
 
-**ITrainer**
+<a name="ITrainer">**ITrainer**</a>
 
 + +GetAll() - выводит список всех тренеров;
 
@@ -49,15 +57,13 @@
 
 + Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функциядобавлениятренеравБД.
 
-**IPhotos**
-
-Данный класс работает с фотографиями. Он содержит в себе атрибуты: ID, URL, State (статус: удаленный или нет).
+<a name="IPhoto">**IPhoto**</a>
 
 + +Add() – функция добавления фото в БД;
 
 + +Del(ID : int) – функция удаления фото (Присвоение статуса «удаленный»).
 
-**IService**
+<a name="IService">**IService**</a>
 
 + +Add(Name:string, Cost:int, Comment:string)– функциядобавленияуслугивБД;
 
@@ -75,7 +81,7 @@
 
 + +GetBalanceFrost(IDCard : int) - показать количество дней заморозки.
 
-**ITariff**
+<a name="ITariff">**ITariff**</a>
 
 + +Add(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) - Добавитьновыйтариф;
 
@@ -89,7 +95,7 @@
 
 + +FindTarrifsByID(ID : int) - найти тариф по ID;
 
-**IRoom**
+<a name="IRoom">**IRoom**</a>
 
 + +Add(Name:string, Equipment:string,
 
@@ -105,7 +111,7 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 
 + +GetScheduleRoomByTime(ID:int) - показать расписание помещения
 
-**ICard**
+<a name="ICard">**ICard**</a>
 
 + +Add(IDTariff: int) - Добавить карту;
 
@@ -125,7 +131,7 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 
 + +FrostCard(IDCard : int, StartDate : DateTime, EndDate : DateTime) - заморозкакарты
 
-**ISchedule**
+<a name="ISchedule">**ISchedule**</a>
 
 + +Add(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) - Добавитьзапись;
 
@@ -137,7 +143,7 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 
 + +GetAll() - вывести список всех записей;
 
-**IPayment**
+<a name="IPayment">**IPayment**</a>
 
 + +Add(IDCard:int, Date:DateTime, Amount:int) - Добавить платеж;
 
