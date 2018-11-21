@@ -1,0 +1,40 @@
+[Назад](./API.md)
+
+## Описание интерфейса ICard
+
+Интерфейс предназначен для работы с методами класса Card
+
+### Реализация интерфейса
+
++ +Add(IDTariff: int, IDClient: int) - Добавить карту;
+	* IDTariff - Номер тарифа в БД;
+	* IDClient - номер пользователя в БД, владелец карты;
+
++ +Del(ID : int) – функция удаления карты (Присвоение статуса «удаленная»);
+	* ID - номер карты в БД;
+
++ +Save(IDTariff: int) – функция сохранения изменений;
+	* IDTariff - Номер тарифа в БД;
+
++ +GetAll() - вывести список всех карт;
+
++ +FindCardByID(ID : int) - поискпо ID;
+	* ID - номер карты в БД;
+
++ +ShowBalance(IDCard : int) - показать остаток услуг по карте;
+	* ID - номер карты в БД;
+
++ +AddVisit(IDCard : int, IDService : int) - добавить посещение;
+	* ID - номер карты в БД;
+	* IDService - номер услуги в БД;
+
++ +DelVisit(IDCard : int, IDService : int) - удалить посещение;
+	* ID - номер карты в БД;
+	* IDService - номер услуги в БД;
+
++ +FrostCard(IDCard : int, StartDate : DateTime, EndDate : DateTime) - заморозка карты;
+	* ID - номер карты в БД;
+	* StartDate - дата начала заморозки;
+	* EndDate - дата разморозки.
+
+[Назад](./API.md)

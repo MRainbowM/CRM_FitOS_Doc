@@ -61,14 +61,14 @@
 + +Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функция добавления тренера в БД.
 
 <a name="IPhoto">[**IPhoto**](./IPhoto.md)</a>
-***
+-----
 
 + +Add() – функция добавления фото в БД;
 
 + +Del(ID : int) – функция удаления фото (Присвоение статуса «удаленный»).
 
 <a name="IService">[**IService**](./IService.md)</a>
-***
+-----
 
 + +Add(Name:string, Cost:int, Comment:string)– функциядобавленияуслугивБД;
 
@@ -87,26 +87,24 @@
 + +GetBalanceFrost(IDCard : int) - показать количество дней заморозки.
 
 <a name="ITariff">[**ITariff**](./ITariff.md)</a>
-***
+-----
 
-+ +Add(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) - Добавитьновыйтариф;
++ +Add(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) - Добавить новый тариф;
 
 + +GetServices() - показать услуги по тарифу;
 
 + +Del(ID : int) – функция удаления тарифа (Присвоение статуса «удаленный»);
 
-+ +Save(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) – функциясохраненияизменений;
++ +Save(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) – функция сохранения изменений;
 
-+ +GetAll() - вывести список всех тарифов;
++ +GetAll(ID : int) - вывести список всех тарифов;
 
 + +FindTarrifsByID(ID : int) - найти тариф по ID;
 
 <a name="IRoom">[**IRoom**](./IRoom.md)</a>
-***
+-----
 
-+ +Add(Name:string, Equipment:string,
-
-Capasity:int,Comment:string) - Добавитьпомещение;
++ +Add(Name:string, Equipment:string, Capacity:int,Comment:string) - Добавить помещение;
 
 + +Del(ID : int) – функция удаления помещение (Присвоение статуса «удаленное»);
 
@@ -119,9 +117,8 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 + +GetScheduleRoomByTime(ID:int) - показать расписание помещения
 
 <a name="ICard">[**ICard**](./ICard.md)</a>
-***
-
-+ +Add(IDTariff: int) - Добавить карту;
+-----
++ +Add(IDTariff: int, IDClient: int) - Добавить карту;
 
 + +Del(ID : int) – функция удаления карты (Присвоение статуса «удаленная»);
 
@@ -131,31 +128,31 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 
 + +FindCardByID(ID : int) - поискпо ID;
 
-+ +ShowBalance(Card : FindCardByID(ID : int)) - показатьостатокуслугпокарте;
++ +ShowBalance(IDCard : int) - показать остаток услуг по карте;
 
-+ +AddVisit(ID\_Card : int, ID\_Service : int) - добавитьпосещение;
++ +AddVisit(IDCard : int, IDService : int) - добавить посещение;
 
-+ +DelVisit(ID\_Card : int, ID\_Service : int) - удалитьпосещение;
++ +DelVisit(IDCard : int, IDService : int) - удалить посещение;
 
-+ +FrostCard(IDCard : int, StartDate : DateTime, EndDate : DateTime) - заморозкакарты
++ +FrostCard(IDCard : int, StartDate : DateTime, EndDate : DateTime) - заморозка карты
 
 <a name="ISchedule">[**ISchedule**](./ISchedule.md)</a>
-***
+-----
 
 + +Add(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) - Добавитьзапись;
 
 + +Del(ID : int) – функция удаления запись (Присвоение статуса «удаленная»);
 
-+ +Save(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) – функциясохраненияизменений;
++ +Save(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) – функция сохранения изменений;
 
-+ +AddFrost( StartDate : DateTime, EndDate : DateTime, IDCard:int) - заморозитькарту;
++ +AddFrost( StartDate : DateTime, EndDate : DateTime, IDCard:int) - заморозить карту;
 
 + +GetAll() - вывести список всех записей;
 
 <a name="IPayment">[**IPayment**](./IPayment.md)</a>
-***
+-----
 
-+ +Add(IDCard:int, Date:DateTime, Amount:int) - Добавить платеж;
++ +Add(IDClient:int, Date:DateTime, Amount:int) - Добавить платеж;
 
 + +Del(ID : int) – функция удаления платежа из БД;
 
