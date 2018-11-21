@@ -41,7 +41,7 @@
 + +Validation(Login:string, Password:string) - функция проверки логина и пароля, вводимых пользователем.
 
 <a name="IClient">[**IClient**](./IClient.md)</a>
-***
+-----
 
 + +Add(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция добавления пользователя в БД;
 
@@ -52,7 +52,7 @@
 + +FindClientByID(ID : int)  - поиск клиента по ID;
 
 <a name="ITrainer">[**ITrainer**](./ITrainer.md)</a>
-***
+-----
 
 + +GetAll() - выводит список всех тренеров;
 
