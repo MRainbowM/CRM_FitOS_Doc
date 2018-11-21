@@ -33,42 +33,43 @@
 + [ISchedule](#ISchedule);
 + [IPayment](#IPayment);
 
-<a name="IUser">[## IUser](./IUser.md)</a>
+<a name="IUser">[**IUser**](./IUser.md)</a>
+-----
 
 
 + +Del(ID : int) - функция удаления пользователя;
 
 + +Validation(Login:string, Password:string) - функция проверки логина и пароля, вводимых пользователем.
 
-***
 <a name="IClient">[**IClient**](./IClient.md)</a>
+***
 
-+ +Add(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функциядобавленияпользователявБД;
++ +Add(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция добавления пользователя в БД;
 
-+ +Save(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функциясохраненияизменений;
++ +Save(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция сохранения изменений;
 
 + +GetAll() - выводит список всех клиентов;
 
 + +FindClientByID(ID : int)  - поиск клиента по ID;
 
-***
 <a name="ITrainer">[**ITrainer**](./ITrainer.md)</a>
+***
 
 + +GetAll() - выводит список всех тренеров;
 
 + +FindTrainerByID(ID : int) - поиск тренера по ID;
 
-+ Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функциядобавлениятренеравБД.
++ Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функция добавления тренера в БД.
 
-***
 <a name="IPhoto">[**IPhoto**](./IPhoto.md)</a>
+***
 
 + +Add() – функция добавления фото в БД;
 
 + +Del(ID : int) – функция удаления фото (Присвоение статуса «удаленный»).
 
-***
 <a name="IService">[**IService**](./IService.md)</a>
+***
 
 + +Add(Name:string, Cost:int, Comment:string)– функциядобавленияуслугивБД;
 
@@ -86,8 +87,8 @@
 
 + +GetBalanceFrost(IDCard : int) - показать количество дней заморозки.
 
-***
 <a name="ITariff">[**ITariff**](./ITariff.md)</a>
+***
 
 + +Add(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) - Добавитьновыйтариф;
 
@@ -101,8 +102,8 @@
 
 + +FindTarrifsByID(ID : int) - найти тариф по ID;
 
-***
 <a name="IRoom">[**IRoom**](./IRoom.md)</a>
+***
 
 + +Add(Name:string, Equipment:string,
 
@@ -118,8 +119,8 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 
 + +GetScheduleRoomByTime(ID:int) - показать расписание помещения
 
-***
 <a name="ICard">[**ICard**](./ICard.md)</a>
+***
 
 + +Add(IDTariff: int) - Добавить карту;
 
@@ -139,8 +140,8 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 
 + +FrostCard(IDCard : int, StartDate : DateTime, EndDate : DateTime) - заморозкакарты
 
-***
 <a name="ISchedule">[**ISchedule**](./ISchedule.md)</a>
+***
 
 + +Add(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) - Добавитьзапись;
 
@@ -152,8 +153,8 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 
 + +GetAll() - вывести список всех записей;
 
-***
 <a name="IPayment">[**IPayment**](./IPayment.md)</a>
+***
 
 + +Add(IDCard:int, Date:DateTime, Amount:int) - Добавить платеж;
 
