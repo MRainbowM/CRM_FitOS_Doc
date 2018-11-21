@@ -6,17 +6,33 @@
 
 ### Реализация интерфейса
 
-+ +GetAll() - выводит список всех тренеров;
++ **+GetAll**() - выводит список всех тренеров;
 
-+ +FindTrainerByID(ID : int) - поиск тренера по ID;
++ **+FindTrainerByID**(ID : int) - поиск тренера по ID;
     * ID -номер пользователя в БД;
 
-+ +Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функция добавления тренера в БД;
-     * FIO - ФИО тренера;
-     * Sex - пол тренера;
-     * Qualification - квалификация тренера;
-     * Phone - номер телефона тренера;
-     * DOB - дата рождения;
-     * Comment - комментарий о тренере.
++ **+Add**(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функция добавления тренера в БД;
+	* FIO - ФИО тренера;
+    * Sex - пол тренера;
+    * Qualification - квалификация тренера;
+    * Phone - номер телефона тренера;
+    * DOB - дата рождения;
+    * Comment - комментарий о тренере.
+
+## Описание класса Trainer
+
+Данный класс наследует все операции класса User, предназначен для работы с данными тренеров.
+
+### Атрибуты класса Trainer
+
+* **-ID** : Int - номер тренера в БД;
+* **-FIO** : String - ФИО тренера;
+* **-Sex** : Bool - пол тренера;
+* **-Qualification** : String - квалификация тренера;
+* **-Phone** : Int - номер телефона тренера;
+* **-DOB** : DateTime - дата рождения;
+* **-Comment** : String - комментарий о тренере;
+* **-Photo** : List<Photos> - фотографии;
+* **-State** : bool - статус: удаленный тренер или нет.
 
 [Назад](./API.md)

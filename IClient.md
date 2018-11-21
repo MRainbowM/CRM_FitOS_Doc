@@ -6,7 +6,7 @@
 
 ### Реализация интерфейса
 
-+ +Add(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция добавления пользователя в БД;
++ **+Add**(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция добавления пользователя в БД;
     * FIO - ФИО клиента;
     * Sex - пол клиента;
     * Height - рост клиента;
@@ -16,7 +16,7 @@
     * DOB - Дата рождения клиента;
     * Comment - общий комментарий о клиенте;
 
-+ +Save(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция сохранения изменений;
++ **+Save**(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функция сохранения изменений;
     * FIO - ФИО клиента;
     * Sex - пол клиента;
     * Height - рост клиента;
@@ -26,9 +26,26 @@
     * DOB - Дата рождения клиента;
     * Comment - общий комментарий о клиенте;
 
-+ +GetAll() - выводит список всех клиентов;
++ **+GetAll()** - выводит список всех клиентов;
 
-+ +FindClientByID(ID : int)  - поиск клиента по ID;
++ **+FindClientByID**(ID : int)  - поиск клиента по ID;
     * ID - номер пользователя в БД.
+
+## Описание класса Client
+
+Данный класс наследует все операции класса User, предназначен для работы с данными клиентов.
+
+### Атрибуты класса Client
+
+* **-FIO** : String - ФИО клиента;
+* **-Sex** : Bool - пол;
+* **-Haight** : Int - рост;
+* **-Weight** : Int - вес;
+* **-Health** : String - состояние здоровья клиента;
+* **-Phone** : Int - номер телефона;
+* **-DOB** : DateTime - дата рождения клиента;
+* **-Comment** : String - комментарий;
+* **-Photo** : List<Photo> - фотографии клиента;
+* **-State** : Bool - статус: удаленный клиент или нет.
 
 [Назад](./API.md)

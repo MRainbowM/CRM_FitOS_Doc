@@ -6,26 +6,40 @@
 
 ### Реализация интерфейса
 
-+ +Add(Name:string, Equipment:string, Capacity:int,Comment:string) - Добавить помещение;
++ **+Add**(Name:string, Equipment:string, Capacity:int,Comment:string) - Добавить помещение;
 	* Name - название помещения;
 	* Equipment - оборудование помещения;
 	* Capacity - вместимость помещения;
 	* Comment - комментарий о помещении;
-+ +Del(ID : int) – функция удаления помещение (Присвоение статуса «удаленное»);
++ **+Del**(ID : int) – функция удаления помещение (Присвоение статуса «удаленное»);
 	* ID - номер помещения в БД;
 
-+ +Save(Name:string, Equipment:string, Capasity:int,Comment:string) – функция сохранения изменений;
++ **+Save**(Name:string, Equipment:string, Capasity:int,Comment:string) – функция сохранения изменений;
 	* Name - название помещения;
 	* Equipment - оборудование помещения;
 	* Capacity - вместимость помещения;
 	* Comment - комментарий о помещении;
 
-+ +GetAll() - вывести список всех помещений;
++ **+GetAll**() - вывести список всех помещений;
 
-+ +FindRoomByID(ID : int) - поискпо ID;
++ **+FindRoomByID**(ID : int) - поискпо ID;
 	* ID - номер помещения в БД;
 
-+ +GetScheduleRoomByTime(ID:int) - показать расписание помещения;
++ **+GetScheduleRoomByTime**(ID:int) - показать расписание помещения;
 	* ID - номер помещения в БД.
+
+## Описание класса Room
+
+Класс позволяет работать с информацией о помещениях.
+
+### Атрибуты класса Room
+
+* **-ID** : Bool - номер помещения в БД;
+* **-Name** : String - название помещения;
+* **-Equipment** : String - оборудование помещения;
+* **-Capacity** : Int - вместимость помещения;
+* **-Comment** : String - комментарий о помещении;
+* **-State** : Bool - статус помещения: удаленное или нет;
+* **-Photo** : List<Photo> - фотографии помещения.
 
 [Назад](./API.md)
