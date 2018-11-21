@@ -34,14 +34,16 @@
 + [IPayment](#IPayment);
 
 <a name="IUser">**IUser**</a>
-
-[Показать](./IUser.md "Описание")
+[Показать](./IUser.md)
+***
 
 + +Del(ID : int) - функция удаления пользователя;
 
 + +Validation(Login:string, Password:string) - функция проверки логина и пароля, вводимых пользователем.
 
 <a name="IClient">**IClient**</a>
+[Показать](./IClient.md)
+***
 
 + +Add(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) – функциядобавленияпользователявБД;
 
@@ -52,6 +54,8 @@
 + +FindClientByID(ID : int)  - поиск клиента по ID;
 
 <a name="ITrainer">**ITrainer**</a>
+[Показать](./ITrainer.md)
+***
 
 + +GetAll() - выводит список всех тренеров;
 
@@ -60,12 +64,16 @@
 + Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) - функциядобавлениятренеравБД.
 
 <a name="IPhoto">**IPhoto**</a>
+[Показать](./IPhoto.md)
+***
 
 + +Add() – функция добавления фото в БД;
 
 + +Del(ID : int) – функция удаления фото (Присвоение статуса «удаленный»).
 
 <a name="IService">**IService**</a>
+[Показать](./IService.md)
+***
 
 + +Add(Name:string, Cost:int, Comment:string)– функциядобавленияуслугивБД;
 
@@ -84,6 +92,8 @@
 + +GetBalanceFrost(IDCard : int) - показать количество дней заморозки.
 
 <a name="ITariff">**ITariff**</a>
+[Показать](./ITariff.md)
+***
 
 + +Add(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) - Добавитьновыйтариф;
 
@@ -98,6 +108,8 @@
 + +FindTarrifsByID(ID : int) - найти тариф по ID;
 
 <a name="IRoom">**IRoom**</a>
+[Показать](./IRoom.md)
+***
 
 + +Add(Name:string, Equipment:string,
 
@@ -114,6 +126,8 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 + +GetScheduleRoomByTime(ID:int) - показать расписание помещения
 
 <a name="ICard">**ICard**</a>
+[Показать](./ICard.md)
+***
 
 + +Add(IDTariff: int) - Добавить карту;
 
@@ -134,6 +148,8 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 + +FrostCard(IDCard : int, StartDate : DateTime, EndDate : DateTime) - заморозкакарты
 
 <a name="ISchedule">**ISchedule**</a>
+[Показать](./ISchedule.md)
+***
 
 + +Add(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) - Добавитьзапись;
 
@@ -146,6 +162,8 @@ Capasity:int,Comment:string) - Добавитьпомещение;
 + +GetAll() - вывести список всех записей;
 
 <a name="IPayment">**IPayment**</a>
+[Показать](./IPayment.md)
+***
 
 + +Add(IDCard:int, Date:DateTime, Amount:int) - Добавить платеж;
 
