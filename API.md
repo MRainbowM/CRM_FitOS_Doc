@@ -33,9 +33,7 @@
 + [ISchedule](#ISchedule);
 + [IPayment](#IPayment);
 
-<a name="IUser">**IUser**</a>
-
-[Показать](./IUser.md)
+<a name="IUser">[**IUser**](./IUser.md)</a>
 
 -----
 
