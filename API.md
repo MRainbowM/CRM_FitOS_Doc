@@ -54,14 +54,14 @@
 
 + +GetAll() : List<[Client](https://github.com/MRainbowM/CRM_FitOS/blob/master/IClient.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-client)> - выводит список всех клиентов;
 
-+ +FindClientByID(ID : int) : Client - поиск клиента по ID;
++ +FindClientByID(ID : int) : [Client](https://github.com/MRainbowM/CRM_FitOS/blob/master/IClient.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-client)- поиск клиента по ID;
 
 <a name="ITrainer">[**ITrainer**](./ITrainer.md)</a>
 -----
 
-+ +GetAll() : List<Trainer> - выводит список всех тренеров;
++ +GetAll() : List<[Trainer](https://github.com/MRainbowM/CRM_FitOS/blob/master/ITrainer.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-trainer)> - выводит список всех тренеров;
 
-+ +FindTrainerByID(ID : int) : Trainer - поиск тренера по ID;
++ +FindTrainerByID(ID : int) : [Trainer](https://github.com/MRainbowM/CRM_FitOS/blob/master/ITrainer.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-trainer) - поиск тренера по ID;
 
 + +Add(FIO:string, Sex:bool,  Qualification:string, Phone:int, DOB:DateTime, Comment:string) : int - функция добавления тренера в БД.
 
@@ -81,11 +81,11 @@
 
 + +Save(Name:string, Cost:int, Comment:string) : bool – функциясохраненияизменений;
 
-+ +GetAll() : List<Service> - вывести список всех услуг;
++ +GetAll() : List<[Service](https://github.com/MRainbowM/CRM_FitOS/blob/master/IService.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-service)> - вывести список всех услуг;
 
-+ +GetTrainers(IDServise : int) : List<Trainer> - вывести всех тренеров услуги;
++ +GetTrainers(IDServise : int) : List<[Trainer](https://github.com/MRainbowM/CRM_FitOS/blob/master/ITrainer.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-trainer)> - вывести всех тренеров услуги;
 
-+ +FindServiceByID(ID : int) : Service - поискуслугипо ID;
++ +FindServiceByID(ID : int) : [Service](https://github.com/MRainbowM/CRM_FitOS/blob/master/IService.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-service) - поискуслугипо ID;
 
 + +GetBalanceService(IDCard : int) : Dictionary<string, int> - показать баланс карты, то есть количество услуги на карте;
 
@@ -96,13 +96,13 @@
 
 + +Add(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) : int - Добавить новый тариф;
 
-+ +GetServices(ID : int) : List<Service> - показать услуги по тарифу;
++ +GetServices(ID : int) : List<[Service](https://github.com/MRainbowM/CRM_FitOS/blob/master/IService.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-service)> - показать услуги по тарифу;
 
 + +Del(ID : int) : bool – функция удаления тарифа (Присвоение статуса «удаленный»);
 
 + +Save(Name:string, Duration:int, TotalCost:float, StartDate:DateTime, DateRemoved:DateTime) : bool – функция сохранения изменений;
 
-+ +GetAll(ID : int) : List<Tariff> - вывести список всех тарифов;
++ +GetAll(ID : int) : List<[Tariff](https://github.com/MRainbowM/CRM_FitOS/blob/master/ITariff.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-tariff)> - вывести список всех тарифов;
 
 + +FindTarrifsByID(ID : int) - найти тариф по ID;
 
@@ -117,11 +117,11 @@
 
 + +Save(Name:string, Equipment:string, Capasity:int,Comment:string) : bool – функция сохранения изменений;
 
-+ +GetAll() : List<Room> - вывести список всех помещений;
++ +GetAll() : List<[Room](https://github.com/MRainbowM/CRM_FitOS/blob/master/IRoom.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-room)> - вывести список всех помещений;
 
-+ +FindRoomByID(ID : int) : Room - поискпо ID;
++ +FindRoomByID(ID : int) : [Room](https://github.com/MRainbowM/CRM_FitOS/blob/master/IRoom.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-room) - поискпо ID;
 
-+ +GetScheduleRoomByTime(ID:int) : Dictionary<DateTIme,string> - показать расписание помещения
++ +GetScheduleRoomByTime(ID:int) : Dictionary<DateTime,string> - показать расписание помещения
 
 <a name="ICard">[**ICard**](./ICard.md)</a>
 -----
@@ -131,9 +131,9 @@
 
 + +Save(IDTariff: int) : bool – функция сохранения изменений;
 
-+ +GetAll() : List<Card> - вывести список всех карт;
++ +GetAll() : List<[Card](https://github.com/MRainbowM/CRM_FitOS/blob/master/ICard.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-card)> - вывести список всех карт;
 
-+ +FindCardByID(ID : int) : Card - поискпо ID;
++ +FindCardByID(ID : int) : [Card](https://github.com/MRainbowM/CRM_FitOS/blob/master/ICard.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-card) - поискпо ID;
 
 + +AddVisit(IDCard : int, IDService : int) : int - добавить посещение;
 
@@ -144,11 +144,11 @@
 <a name="ISchedule">[**ISchedule**](./ISchedule.md)</a>
 -----
 
-+ +Add(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) : int - Добавитьзапись;
++ +Add(Trainer : [Trainer](https://github.com/MRainbowM/CRM_FitOS/blob/master/ITrainer.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-trainer), Card : [Card](https://github.com/MRainbowM/CRM_FitOS/blob/master/ICard.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-card), Service : [Service](https://github.com/MRainbowM/CRM_FitOS/blob/master/IService.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-service), Room : [Room](https://github.com/MRainbowM/CRM_FitOS/blob/master/IRoom.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-room), Date : DateTime) : int - Добавитьзапись;
 
 + +Del(ID : int) : bool – функция удаления запись (Присвоение статуса «удаленная»);
 
-+ +Save(Trainer : Trainer, Card : Card, Service : Service, Room : Room, Date : DateTime) : bool – функция сохранения изменений;
++ +Save(Trainer : [Trainer](https://github.com/MRainbowM/CRM_FitOS/blob/master/ITrainer.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-trainer), Card : [Card](https://github.com/MRainbowM/CRM_FitOS/blob/master/ICard.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-card), Service : [Service](https://github.com/MRainbowM/CRM_FitOS/blob/master/IService.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-service), Room : [Room](https://github.com/MRainbowM/CRM_FitOS/blob/master/IRoom.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-room), Date : DateTime) : bool – функция сохранения изменений;
 
 + +AddFrost( StartDate : DateTime, EndDate : DateTime, IDCard:int) : bool - заморозить карту;
 
