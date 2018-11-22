@@ -52,7 +52,7 @@
 
 + +Save(FIO:string, Sex:bool, Height:int, Weight:int, Health:int, Phone:int, DOB:DateTime, Comment:string) : bool – функция сохранения изменений;
 
-+ +GetAll() : List<Client> - выводит список всех клиентов;
++ +GetAll() : List<[Client](https://github.com/MRainbowM/CRM_FitOS/blob/master/IClient.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-client)> - выводит список всех клиентов;
 
 + +FindClientByID(ID : int) : Client - поиск клиента по ID;
 
