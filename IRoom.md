@@ -34,12 +34,12 @@
 
 ### Атрибуты класса Room
 
-* **-ID** : Bool - номер помещения в БД;
-* **-Name** : String - название помещения;
-* **-Equipment** : String - оборудование помещения;
-* **-Capacity** : Int - вместимость помещения;
-* **-Comment** : String - комментарий о помещении;
-* **-State** : Bool - статус помещения: удаленное или нет;
-* **-Photo** : List<Photo> - фотографии помещения.
+* **ID** : Bool - номер помещения в БД;
+* **Name** : String - название помещения;
+* **Equipment** : String - оборудование помещения;
+* **Capacity** : Int - вместимость помещения;
+* **Comment** : String - комментарий о помещении;
+* **State** : Bool - статус помещения: удаленное или нет;
+* **Photo** : List<[Photo](https://github.com/MRainbowM/CRM_FitOS/blob/master/IPhoto.md#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-photo)> - фотографии помещения.
 
 [Назад](./API.md)
